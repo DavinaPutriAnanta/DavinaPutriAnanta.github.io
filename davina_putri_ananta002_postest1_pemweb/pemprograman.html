@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukti Pemesanan</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .container {
+            margin: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">
+             <img src="logo-resto.jpeg" alt="Restaurant Logo"> 
+             <br>
+        </div>
+        <h3><hr><b>Bukti Pemesanan</b></hr></h3>
+        <table class="details">
+            <tr>
+                <td><strong>Nama Pelayan: </strong> Davin</td>
+                <td><strong>Tanggal Pemesanan: </strong><input type=date></td>
+            </tr>
+            <tr>
+                <td><strong>Nama Pemesan:</strong> Putri Ananta</td>
+                <td><strong>Alamat Pemesan:</strong> Jl. Perjuangan 3</td>
+            </tr>
+        </table>
+        <table class="order">
+            <tr>
+                <td><strong>Nama menu</strong></td>
+                <td><strong>Harga satuan</sttrong></td>
+                <td><strong>Jumlah</strong></td>
+                <td><strong> Total</strong></td>
+            </tr>
+            <tr>
+                <td><img src="nasi-goreng.jpeg" alt="nasi goreng"> Nasi Goreng</td>
+                <td>Rp. 25.000</td>
+                <td>1 Porsi</td>
+                <td>Rp. 25.000</td>
+            </tr>
+            <tr>
+                <td><img src="es-teh-manis.jpeg" alt="Es Teh Manis"> Es Teh Manis</td>
+                <td>Rp. 5.000</td>
+                <td>1 Gelas</td>
+                <td>Rp. 5.000</td>
+            </tr>
+        </table>
+        <table class="detail">
+            <tr>
+                <td class="total"><strong>Total Pesanan:</strong></td>
+                <td>Rp. 30.000</td>
+            </tr>
+            <tr>
+                <td class="total"><strong>Pajak:</strong></td>
+                <td>Rp. 2.000</td>
+            </tr>
+            <tr>
+                <td class="total"><strong>Total Tagihan:</strong></td>
+                <td>Rp. 32.000</td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <table>
+        <th><p><strong>Metode Pembayaran:</strong></p></th>
+        <td><input type="radio" name="Payment" value="BCA">BCA</td>
+        <td><input type="radio" name="Payment" value="BRI">BRI</td>
+        <td><input type="radio" name="Payment" value="OVO">OVO</td>
+        <td><input type="radio" name="Payment" value="DANA">DANA</td>
+    </div>
+        </table>
+    <div class="footer">
+        <table>
+            <td>
+                <ul>
+                    <li><strong>Nama: </strong> Davina Putri Anaanta</li>
+                    <li><strong>Nim: </strong> 2309106002</li>
+                    <li><strong>Praktikum: </strong>1</li>
+                </ul>
+            </td>
+    </table>
+    </div>
+</body>
+</html>
