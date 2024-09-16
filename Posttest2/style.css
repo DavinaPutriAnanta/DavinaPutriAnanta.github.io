@@ -1,0 +1,127 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffe4fa;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: #fed6ff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.hero {
+    height: 100vh;
+    background: url('woman2.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.decorative-img {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 200px;
+    height: auto;
+    opacity: 0.7;
+    z-index: 1;
+}
+.btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #fcd0e6;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; 
+}
+
+.btn:hover {
+    background-color: #ff5e94;
+}
+
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.products {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.product p {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffc3f7;
+    border-top: 1px solid #ddd;
+    color: #000000;
+}
