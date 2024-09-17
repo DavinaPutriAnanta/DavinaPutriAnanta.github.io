@@ -1,0 +1,223 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    max-width: 100px;
+    margin-bottom: 300px; 
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+.bill-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 950px;
+    width: 100%;
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.02);
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+td {
+    color: #333333;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+input[type="date"], input[type="number"], input[type="radio"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="date"]:focus, input[type="number"]:focus {
+    box-shadow: 0 0 10px rgba(58, 141, 255, 0.5);
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+b {
+    font-weight: 600;
+    color: #333;
+}
+
+button {
+    background-color: #3a8dff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(58, 141, 255, 0.2);
+}
+
+button:hover {
+    background-color: #3379e6;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+input[type="radio"] + label {
+    margin-right: 20px;
+    color: #555;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+td[colspan="4"] {
+    text-align: left;
+}
+
+p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+@media (max-width: 1200px) {
+    .bill-container {
+        padding: 15px;
+    }
+
+    table, th, td {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .bill-container {
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    img {
+        max-width: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bill-container {
+        padding: 8px;
+    }
+
+    table, th, td {
+        font-size: 11px;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 60px;
+    }
+
+    input[type="date"], input[type="number"], input[type="radio"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .bill-container {
+        padding: 5px;
+    }
+
+    table, th, td {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    img {
+        max-width: 50px;
+    }
+
+    input[type="date"], input[type="number"], input[type="radio"] {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUKTI PEMESANAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="logo-resto.jpeg" alt="Logo Resto" class="logo"> 
+    <div class="container">
+        <div class="bill-container">
+            <table border="1">
+                <tr> 
+                    <td align="center" colspan="4">
+                        <center>
+                            <p><u><b>Bukti Pemesanan</b></u></p>
+                        </center>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nama Pelayan:</b> Davina</td>
+                    <td colspan="2">
+                        <b>Tanggal Pemesanan:</b>  
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nama Pemesan:</b> Putri Ananta</td>
+                    <td colspan="2"><strong>Alamat Pemesan:</strong> Jl. Perjuangan 3</td>
+                </tr>
+                <tr>
+                    <th>Nama Menu</th>
+                    <th>Jumlah</th>
+                    <th>Harga Satuan</th>
+                    <th>Total Harga</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="nasi-goreng.jpeg" alt="Nasi Goreng Spesial">
+                        <br>Nasi Goreng Spesial
+                    </td>
+                    <td>
+                        <input type="number" name="jumlah" value="1"> <h>Porsi</h>
+                    </td>
+                    <td>Rp 25.000</td>
+                    <td>Rp 25.000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="es-teh-manis.jpeg" alt="Es Teh Manis">
+                        <br>Es Teh Manis
+                    </td>
+                    <td>
+                        <input type="number" name="jumlah" value="1"> <h>Gelas</h>
+                    </td>
+                    <td>Rp 5.000</td>
+                    <td>Rp 5.000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total Pesanan</th>
+                    <td>Rp 30.000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Pajak</th>
+                    <td>Rp 2.000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total Tagihan</th>
+                    <td>Rp 32.000</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <b>Metode Pembayaran:</b>
+                        <br>
+                        <input type="radio" name="Metode Pembayaran" id="bca">
+                        <label for="bca">Bank BCA</label>
+                        <input type="radio" name="Metode Pembayaran" id="bri">
+                        <label for="bri">Bank BRI</label>
+                        <input type="radio" name="Metode Pembayaran" id="ovo">
+                        <label for="ovo">OVO</label>
+                        <input type="radio" name="Metode Pembayaran" id="dana">
+                        <label for="dana">Dana</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <ul>
+                            <li>Nama: Davina Putri Ananta</li>
+                            <li>NIM: 2309106002</li>
+                            <li>Praktikum Web: Posttest 1</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
