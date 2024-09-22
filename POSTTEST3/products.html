@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products -  Skincare and Cosmetics</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        #navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+        .product {
+            margin: 20px;
+            display: inline-block;
+            width: 200px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .add-to-cart {
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="brand-title">My Brand</div>
+            <ul id="navbar-links" style="display: flex; list-style-type: none; margin: 0; padding: 0;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="javascript:void(0);" onclick="toggleDarkMode()">Dark/Light Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Our Products</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="product">
+                <img src="vit c.jpg" alt="Produk 1">
+                <h3>Green Tea Enzyme Vitamin C Brightening Serum</h3>
+                <p>A brightening serum with Vitamin C and enzymes from Green Tea that helps visibly smooth and fade dark spots, including sun spots and post-breakout marks, for a more even-toned, refined complexion.</p>
+                <button class="add-to-cart" onclick="addToCart('Produk 1')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="moist laneige.jpg" alt="Produk 2">
+                <h3>LANEIGE's Water Bank Gel Moisturizer</h3>
+                <p>Say goodbye to dry skin and hello to a radiant, plump complexion. This non-greasy formula is packed with replenishing nutrients to keep your skin moisturized all day long. Get ready to quench your skin’s thirst and glow with confidence!</p>
+                <button class="add-to-cart" onclick="addToCart('Produk 2')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="sk.jpg" alt="Produk 3">
+                <h3>Facial Treatment Essence (Pitera Essence) </h3>
+                <p>SK-II Japanese luxury skincare products are packed with the exclusive and signature ingredient, PITERA™, for self-regenerating, youthful skin. Free Shipping.</p>
+                <button class="add-to-cart" onclick="addToCart('Produk 3')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="alba.jpg" alt="Produk 4">
+                <h3>d'Alba White Truffle First Spray Serum 100ml</h3>
+                <p>Premium White Truffles carefully extracted from Piedmont, Italy, infused with Tocopherol(vitamin E) make d'Alba's signature ingredient Trufferol.</p>
+                <button class="add-to-cart" onclick="addToCart('Produk 4')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="clinique.jpg" alt="Produk 5">
+                <h3>Moisture Surge™ Intense 72H Lipid-Replenishing Hydrator | Clinique</h3>
+                <p>Rich cream-gel delivers 72-hour hydration for velvety-smooth skin.</p>
+                <button class="add-to-cart" onclick="addToCart('Produk 5')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+        function addToCart(productName) {
+            alert(productName + ' telah ditambahkan ke keranjang!');
+        }
+    </script>
+</body>
+</html>
