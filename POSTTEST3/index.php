@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+// Cek apakah pengguna sudah login
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit();
+}
+
+$brandTitle = "My Brand";
+$aboutMe = "Davina Putri Ananta";
+$studentID = "2309106002";
+$assignment = "POSTTEST 3";
+$course = "Pemrograman Web";
+
+$heroImage = "cewe2.jpg";
+$productImage = "lame.jpg";
+$productTitle = "La Mer’s";
+$productDescription = "Experience La Mer’s best skincare. Discover skincare-infused face makeup, our best moisturizers and unique treatments to unlock skin’s radiant rejuvenation.";
+
+$username = $_SESSION['username']; // Ambil username dari sesi
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -35,7 +58,7 @@
             margin: 0 15px;
         }
         .hero {
-            background-image: url('cewe2.jpg');
+            background-image: url('<?php echo $heroImage; ?>');
             height: 100vh;
             background-size: cover;
             display: flex;
@@ -55,35 +78,44 @@
             color: #333;
             font-family: "Playfair Display SC", serif;
             font-size: 25px;
-
         }
     </style>
 </head>
 <body>
     <header>
         <nav id="navbar">
-            <div class="font" id="brand-title"><b>My Brand</b></div>
+            <div class="font" id="brand-title"><b><?php echo $brandTitle; ?></b></div>
             <ul id="navbar-links" style="display: flex; list-style-type: none; margin: 0; padding: 0;">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="javascript:void(0);" onclick="toggleDarkMode()"> ◑</a></li>
+                <li><a href="javascript:void(0);" onclick="toggleDarkMode()"> ◑ </a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="hero">
-        <h1>Selamat Datang di My Brand</h1>
+        <h1>Selamat Datang di <?php echo $brandTitle; ?></h1>
     </div>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p><b><?php echo $aboutMe; ?></b></p>
+        <p><?php echo $studentID; ?></p>
+        <p><?php echo $assignment; ?></p>
+        <p><?php echo $course; ?></p>
+        <p>Selamat datang, <b><?php echo htmlspecialchars($username); ?></b>!</p> 
+    </section>
 
     <section>
         <h2>Produk Unggulan</h2>
         <p>Temukan produk kami di bawah ini:</p>
         <div>
-            <img src="lame.jpg" alt="Produk Unggulan" style="width: 300px; height: auto;">
-            <h3>La Mer’s</h3>
-            <p>Experience La Mer’s best skincare. Discover skincare-infused face makeup, our best moisturizers and unique treatments to unlock skin’s radiant rejuvenation.</p>
-            <p> Temukan Produk skincare Luxury lainnya di website kami!</p>
+            <img src="<?php echo $productImage; ?>" alt="Produk Unggulan" style="width: 300px; height: auto;">
+            <h3><?php echo $productTitle; ?></h3>
+            <p><?php echo $productDescription; ?></p>
+            <p>Temukan Produk skincare Luxury lainnya di website kami!</p>
             <a href="products.html">Lihat Semua Produk</a>
         </div>
     </section>
